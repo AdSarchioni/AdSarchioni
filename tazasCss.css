@@ -1,16 +1,233 @@
- 
- .flex-container {
+  
+*{
+	margin: 20;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.flex-container  {
+  display: flex;
+  background-color: rgba(16, 217, 231, 0.848);
+  color: white;
+  width: 100%;
+  
+  margin: 10px;
+  text-align:center;
+  line-height: 30px;
+  font-size: 15px;
+  float: left;
+}
+
+.t1 img {
+  
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0,1);
+  border-radius: 20px;
+  }
+  .t2 img {
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
-    background-color: #e49595;
+    border: 2px solid rgba(0, 0, 0,1);
+    border-radius: 20px;
+    }
+  .t2  :hover {
+      transform: scale(1.5);
+      transition: all 0.5s; 
+    }
+    .t1  :hover {
+      transform: scale(1.5);
+      transition: all 0.5s;
+    }
+ .p{
+
+  text-align: center;
+  font-size: 2.3em;
+ }
+ .div_p{
+  box-sizing: border-box;
+  width: 20%;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0,1);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.div_form {
+  background-color: rgba(225, 240, 216, 0.1);
+float: right;
+    margin: 10;
+    width: 100%;
+    font-family: sans-serif;
+}
+.formulario {
+  width: 400px;
+  max-width: 100%; 
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.formulario__titulo {
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+color:rgba(0, 0, 0, 1) ;
+}
+
+.formulario__input, .formulario__label,
+.formulario__submit {
+display: block;
+width: 100%;
+margin-bottom: 20px;
+font-size: 1.1em;
+}
+
+.formulario__input {
+  padding: 20px;
+  background :rgba(145,74,85,0.3);
+  border: 1px solid rgba(0, 0, 0,1);
+  margin-bottom: 25px;
+}
+.formulario__input:focus{
+  outline: 1px solid rgba(0, 0, 0, 1);
+}
+.formulario__input:focus +
+.formulario__label{
+  margin-top: -85px;
+}
+.formulario__label {
+  text-align: left;
+  padding-left: 15px;
+  position:absolute;
+  margin-top: -65px;
+  z-index: -20;
+  color: rgba(0,0,0,1);
+  transition: all 0.2s;
   }
-  
-  .flex-container > div {
-    background-color: DodgerBlue;
-    color: white;
-    width: 200px;
-    margin: 25px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 30px;
-  }
-  
+  .formulario__submit {
+    background: rgba(152, 40, 40, 1);
+    color :white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    
+    }
+    .fijar {
+margin-top: -85px;
+ }
+
+.main {
+  height: 1460px;;
+}
+
+.container-bar{
+	width: 100%;
+	max-width: 50px;
+	position:fixed ;
+	left: 0;
+	top: 20%;
+}
+.container-bar a{
+	display: block;
+	width: 70px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	transition: all 500ms ease;
+	color: #fff;
+}
+.container-bar a:hover{
+	background: #1c1c1c;
+}
+.container-bar .fa-facebook{
+	background: #3b5998;
+	border-radius: 0px 5px 0px 0px;
+}
+.container-bar .fa-youtube{
+	background: #e52a23;
+}
+.container-bar .fa-twitter{
+	background: #00acee;
+}
+.container-bar .fa-insta{
+	background: #e035f09a;
+}
+.container-bar .fa-pinterest{
+	background:rgba(232, 247, 23, 0.997);
+	border-radius: 0px 0px 5px 0px;
+}
+.container-bar #title{
+	position: absolute;
+	background: #1c1c1c;
+	padding: 0px 8px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 15px;
+	top:12px; left: 0px;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+.container-bar a:hover #title{
+	opacity: 1;
+	visibility: visible;
+	left: 90px;
+}
+.container-bar #title:after{
+	position: absolute;
+	content: '';
+	border-left: 7px solid transparent;
+	border-right: 6px solid #1c1c1c;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	right: 100%;
+	top: 8px;
+}
+
+/*
+#btn-social{
+	display:none;
+}
+
+#btn-social:checked ~ .fa-play{
+	transform: rotate(0deg);
+}
+.fa-play{
+	cursor: pointer;
+	transition: all 0.4s;
+	font-size: 12px;
+	margin-bottom: 25px;
+	display: inline-block;
+	transform: rotate(180deg);
+	color: #49b0e6;
+}
+.icon-social{
+	transition: all 0.4s;
+	transform: translateX(0%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+*/
+#btn-social:checked ~ .icon-social{
+	transform: translateX(-150%);
+	box-shadow: 0px 1px 10px rgba(231, 10, 10, 0.917);
+}
+header,footer {
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+}

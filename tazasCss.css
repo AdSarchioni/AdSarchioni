@@ -197,29 +197,7 @@ margin-top: -85px;
 	top: 8px;
 }
 
-/*
-#btn-social{
-	display:none;
-}
 
-#btn-social:checked ~ .fa-play{
-	transform: rotate(0deg);
-}
-.fa-play{
-	cursor: pointer;
-	transition: all 0.4s;
-	font-size: 12px;
-	margin-bottom: 25px;
-	display: inline-block;
-	transform: rotate(180deg);
-	color: #49b0e6;
-}
-.icon-social{
-	transition: all 0.4s;
-	transform: translateX(0%);
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-}
-*/
 #btn-social:checked ~ .icon-social{
 	transform: translateX(-150%);
 	box-shadow: 0px 1px 10px rgba(231, 10, 10, 0.917);

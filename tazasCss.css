@@ -8,10 +8,10 @@
 
 .flex-container  {
   display: flex;
-  background-color: rgba(16, 217, 231, 0.848);
+  background-color: rgba(248, 248, 117, 0.148);
   color: white;
+
   width: 100%;
-  
   margin: 10px;
   text-align:center;
   line-height: 30px;
@@ -43,10 +43,12 @@
       transition: all 0.5s;
     }
  .p{
-
+color: #1c1c1c;
   text-align: center;
   font-size: 2.3em;
+  
  }
+
  .div_p{
   box-sizing: border-box;
   width: 20%;
@@ -58,18 +60,22 @@
 }
 
 .div_form {
-  background-color: rgba(225, 240, 216, 0.1);
-float: right;
+ 
+  
+  display: flex;
+  border: 2px solid rgba(0, 0, 0,1);
+  border-radius: 20px; 
+  float: right;
+/*  background-color: rgba(225, 240, 216, 0.1);
+ box-sizing: border-box;
+   
     margin: 10;
     width: 100%;
-    font-family: sans-serif;
+    font-family: sans-serif;*/
 }
 .formulario {
-  width: 400px;
-  max-width: 100%; 
-  float: right;
-  margin-top: 10px;
-  margin-right: 20px;
+  width: 700px;
+  float: left;
   padding: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -129,9 +135,9 @@ margin-top: -85px;
 
 .container-bar{
 	width: 100%;
-	max-width: 50px;
+	max-width: 70px;
 	position:fixed ;
-	left: 0;
+	right: 0px;
 	top: 20%;
 }
 .container-bar a{
@@ -151,7 +157,7 @@ margin-top: -85px;
 }
 .container-bar .fa-facebook{
 	background: #3b5998;
-	border-radius: 0px 5px 0px 0px;
+	border-radius: 5px 0px 0px 0px;
 }
 .container-bar .fa-youtube{
 	background: #e52a23;
@@ -164,7 +170,7 @@ margin-top: -85px;
 }
 .container-bar .fa-pinterest{
 	background:rgba(232, 247, 23, 0.997);
-	border-radius: 0px 0px 5px 0px;
+	border-radius: 0px 0px 0px 5px;
 }
 .container-bar #title{
 	position: absolute;
@@ -175,7 +181,7 @@ margin-top: -85px;
 	text-align: center;
 	border-radius: 3px;
 	font-size: 15px;
-	top:12px; left: 0px;
+	top:12px; right: 0px;
 	transition: all 500ms ease;
 	opacity: 0;
 	visibility: hidden;
@@ -184,7 +190,7 @@ margin-top: -85px;
 .container-bar a:hover #title{
 	opacity: 1;
 	visibility: visible;
-	left: 90px;
+	right: 80px;
 }
 .container-bar #title:after{
 	position: absolute;
@@ -193,11 +199,69 @@ margin-top: -85px;
 	border-right: 6px solid #1c1c1c;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	right: 100%;
+	left: 95%;
 	top: 8px;
 }
 
+.lista{
+  background-color: cadetbluea;
+}
+.logo{
+  box-sizing: border-box;
+  
+  
+  border: 8px solid rgba(0, 0, 0,1);
+  border-radius: 20px;
+}
+.img_logo{
 
+  display: flex;
+  border: 2px solid rgba(0, 0, 0,1);
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+
+  box-sizing: border-box;
+  
+}
+#boton{
+float: left;
+margin-left: 20px;
+
+}
+/*
+ display: flex;
+  background-color: rgba(16, 217, 231, 0.848);
+  color: white;
+
+  width: 100%;
+  margin: 10px;
+  text-align:center;
+  line-height: 30px;
+  font-size: 15px;
+  float: left;
+#btn-social{
+	display:none;
+}
+
+#btn-social:checked ~ .fa-play{
+	transform: rotate(0deg);
+}
+.fa-play{
+	cursor: pointer;
+	transition: all 0.4s;
+	font-size: 12px;
+	margin-bottom: 25px;
+	display: inline-block;
+	transform: rotate(180deg);
+	color: #49b0e6;
+}
+.icon-social{
+	transition: all 0.4s;
+	transform: translateX(0%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+*/
 #btn-social:checked ~ .icon-social{
 	transform: translateX(-150%);
 	box-shadow: 0px 1px 10px rgba(231, 10, 10, 0.917);
@@ -209,3 +273,4 @@ header,footer {
   padding: 5px;
   text-align: center;
 }
+  

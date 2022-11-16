@@ -8,28 +8,38 @@
     <link rel="stylesheet" href="cssMipagina.css">
 </head>
 <body>
-    
-
-<h1>Flexible Items</h1>
-
-<div class="flex-container">
-  <div>
-    <a href="taza1.html" target= "_self"><img src="Bosqueceramica/img1.jpeg"></a>
- </div>
-  <div>
-    <a href="taza1.html" target= "_self"><img src="Bosqueceramica/img2.jpeg"></a>
+  <h1 class="titu">Bosque Ceramicas</h1>
+  <div class="carrusel">
+    <div class="imagenes">
+      <a href="taza1.html" target="_self"><img src="Bosqueceramica/img16.jpeg" alt="" class="imagen"></a>
+        <a href="taza1.html" target="_self"><img src="Bosqueceramica/img17.jpeg" alt="" class="imagen"></a>
+          <a href="taza1.html" target="_self"><img src="Bosqueceramica/img18.jpeg" alt="" class="imagen"></a>
+            <a href="taza1.html" target="_self"><img src="Bosqueceramica/img19.jpeg" alt="" class="imagen"></a>
+              <a href="taza1.html" target="_self"><img src="Bosqueceramica/img20.jpeg" alt="" class="imagen"></a>
+                <a href="taza1.html" target="_self"><img src="Bosqueceramica/img21.jpeg" alt="" class="imagen"></a>
+                  <a href="taza1.html" target="_self"><img src="Bosqueceramica/img22.jpeg" alt="" class="imagen"></a>
+                  <a href="taza1.html" target="_self"><img src="Bosqueceramica/img23.jpeg" alt="" class="imagen"></a>
+    </div>
+    <div class="control">
+      <button class="avanzar" id="btn">avanza</button>
+      
+      <button class="retroceder" id="btn">atras</button>
+    </div>
+    <script src="jsMiPagina.js"></script>
   </div>
-  <div>
-    <a href="taza1.html" target= "_self"><img src="Bosqueceramica/img3.jpeg"></a>
-  </div> 
-  <div>
-    <a href="taza1.html" target= "_self"><img src="Bosqueceramica/img4.jpeg"></a>
+  <div class="flex-container">
+    <div>
+      <div class="carrousel">
+        <button onclick="retroceder()" class="btn-flecha"><img src="ico_instag.jpg" alt="Anterior"></button>
+        <img id="img-foto" src="Bosqueceramica/img1.jpeg" alt="tazas" height="420px">
+        <button onclick="avanzar()" class="btn-flecha"><img src="ico_youtube.jpg" alt="Siguiente"></button>
+        
+    </div>
+    <script src="carrusel4.js"> </script>
+    </div>
   </div>
-  <div>
-    <a href="taza1.html" target= "_self"><img src="Bosqueceramica/img5.jpeg"></a>
-  </div>
-</div>
 
+  <!--buscar icono para poner 
 <p>All direct children of a flexible container becomes flexible items.</p>
 <div class="flex-container">
   <div><img src="Bosqueceramica/img6.jpeg" alt=""></div>
@@ -53,6 +63,8 @@
   <div><img src="Bosqueceramica/img18.jpeg" alt=""></div> 
   <div><img src="Bosqueceramica/img19.jpeg" alt=""></div>
   <div><img src="Bosqueceramica/img20.jpeg" alt=""></div>
-</div>
+</div>-->   
+
+
 </body>
 </html>

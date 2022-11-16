@@ -4,15 +4,62 @@
   
  .flex-container {
   display: flex;
-  background-color: #e49595;
+  background-color:hsl(208, 78%, 79%,0.4) ;
 }
 
 .flex-container > div {
-  background-color: DodgerBlue;
+  background-color: rgb(232, 232, 169,0.5);
   color: white;
-  width: 200px;
   margin: 25px;
   text-align: center;
   line-height: 20px;
   font-size: 30px;
+  margin: auto;
 }
+/*-------------------------------------------------------*/
+.carrusel{
+  width: 1000px;
+  height: 450px;
+  overflow: hidden;
+  background-color: rgb(232, 232, 169,0.5);
+  margin: auto;
+  margin-top: 10px;
+  border: solid black 3px;
+  border-radius: 20px;
+  }
+  .imagenes {
+      display: flex;
+      transform: translateY(0);
+      transition: transform 1s ease-in-out;
+  }
+  .control{
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #btn{
+    border: solid black 1px;  
+    background-color: aquamarine;
+    flex-basis: 20%;
+    cursor: pointer;
+  }
+  .imagen {
+  
+  height: 400px;
+  
+  }
+  #img-foto{
+    margin: auto;
+  }
+  .titu {
+    font-family:Cambria, Cochin, Georgia;
+    font-size: 40px;
+    background-color: rgb(232, 232, 169,0.5);
+  }
+  body{
+    background-image: url(Bosqueceramica/logo.jpeg);
+  }
+  .carrousel{
+    border: solid black 3px;
+    border-radius: 20px;
+  }

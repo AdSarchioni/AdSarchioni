@@ -26,24 +26,30 @@
         <div class="div_p">
           <p class="p"> hola como estas </p>
         </div>
-
+        
       </div>
-      <div class="div_form">
-        <form action="" class="formulario">
-          <h1 for="" class="formulario__titulo">Contactenos</h1>
-          <input type="text" class="formulario__input">
-          <label for="" class="formulario__label">Nombre</label>
-          <input type="text" class="formulario__input">
-          <label for="" class="formulario__label">Correo</label>
-          <input type="text" class="formulario__input">
-          <label for="" class="formulario__label">Telefono</label>
-          <input type="text" class="formulario__input">
-          <label for="" class="formulario__label">Mensaje</label>
-          <input type="submit" class="formulario__submit">
-        </form>
-        <script src="formJS.js"></script>
+     
+      <div class="flex-container">
+        
+        <div class="div_form">
+          <form action="" class="formulario">
+            <h1 for="" class="formulario__titulo">Contactenos</h1>
+            <input type="text" class="formulario__input" id="nombre">
+            <label for="" class="formulario__label">Nombre</label>
+            <input type="text" class="formulario__input">
+            <label for="" class="formulario__label">Correo</label>
+            <input type="text" class="formulario__input">
+            <label for="" class="formulario__label">Telefono</label>
+            <input type="text" class="formulario__input" id="mensaje">
+            <label for="" class="formulario__label">Mensaje</label>
+            <input type="submit" class="formulario__submit">
+          </form>
+          <script src="jsMiPagina.js"></script>
+           </div> 
+           <img class="img_logo" src="Bosqueceramica/logo.jpeg" alt="">
       </div>
 
+      
       <div>
         <div class="container-bar">
           <input type="checkbox" id="btn-social">
@@ -73,10 +79,11 @@
       </div>
     </div>
     <footer>
-      <P>
-        aca tambien las letras chiquitas que nadie leee
-
-      </P>
+      <button onclick="validar()" id="boton">boton</button>
+      <div class="lista">
+        <ul id="lista_errores"></ul>
+        <ul id="lista_mensajes"></ul>
+      </div>
     </footer>
 </body>
 

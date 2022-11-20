@@ -1,14 +1,19 @@
 
   
-  
+ body{
+  background-image: url(Bosqueceramica/alfarero.jpg);
+  background-size: 110%;
+  background-repeat: no-repeat;
+
+} 
   
  .flex-container {
   display: flex;
-  background-color:rgba(206, 222, 235, 0.66) ;
+ 
 }
 
 .flex-container > div {
-  background-color: rgb(232, 232, 169,0.5);
+  background-color:rgb(232, 232, 169,0.5); ;
   color: white;
   margin: 25px;
   text-align: center;
@@ -21,7 +26,7 @@
   width: 1000px;
   height: 450px;
   overflow: hidden;
-  background-color: rgb(232, 232, 169,0.3);
+  background-color:rgb(232, 232, 169,0.5); ;
   margin: auto;
   margin-top: 10px;
   border: solid black 3px;
@@ -61,9 +66,7 @@
     background-color: rgb(232, 232, 169,0.5);
     text-align: center;
   }
-  body{
-    background-image: url(Bosqueceramica/logo.jpeg);
-  }
+  
   .carrousel{
     border: solid black 3px;
     border-radius: 20px;
@@ -73,3 +76,8 @@
     border-radius: 5px;
     box-shadow: 0 0 20px 1px rgba(234, 54, 54, 0.705);
   }
+.p{
+font-size: 20px;
+font-family: Haettenschweiler;
+line-height: 10px;
+}

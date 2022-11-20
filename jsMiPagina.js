@@ -1,32 +1,80 @@
+
+
+
+
+const expresiones = {
+    mensaje: /^[a-zA-Z0-9\s\_\-]{4,60}$/, // Letras, numeros, guion y guion_bajo
+    nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
 let inputs = document.getElementsByClassName('formulario__input');
 
-//const formulario = document.getElementById('formulario');//accedemos al id del formulario
-//const inputs = document.querySelectorAll('#formulario input');//trae un arreglo con todos los input del formulario
 
-for (let i = 0; i< inputs.length; i++) {
 
-   inputs[i].addEventListener('keyup',function(){
-       
-if(this.value.length>=1){
-this.nextElementSibling.classList.add('fijar')
-   }else{
-    this.nextElementSibling.classList.remove('fijar');
-    }
+for (let i = 0; i < inputs.length; i++) {
 
-});
+    inputs[i].addEventListener('keyup', function () {
+        if (expresiones.nombre.test(nombre.value)) {
+            nombre.classList.add("ok");
+            document.querySelector(`#error_n .formulario_error`).classList.remove('formulario_error-activo');
+        } else {
+            nombre.classList.add("error");
+            nombre.classList.remove("ok");
+            document.querySelector(`#error_n .formulario_error`).classList.add('formulario_error-activo');
+        }
+        if (expresiones.mensaje.test(mensaje.value)) {
+            mensaje.classList.add("ok");
+            document.querySelector(`#error_m .formulario_error`).classList.remove('formulario_error-activo');
+        }
+        else {
+            mensaje.classList.add("error");
+            mensaje.classList.remove("ok");
+            document.querySelector(`#error_m .formulario_error`).classList.add('formulario_error-activo');
+        }
+        if (expresiones.correo.test(correo.value)) {
+            correo.classList.add("ok");
+            document.querySelector(`#error_c .formulario_error`).classList.remove('formulario_error-activo');
+        }
+        else {
+            correo.classList.add("error");
+            correo.classList.remove("ok");
+            document.querySelector(`#error_c .formulario_error`).classList.add('formulario_error-activo');
+        }
+        if (expresiones.telefono.test(telefono.value)) {
+            telefono.classList.add("ok");
+            document.querySelector(`#error_t .formulario_error`).classList.remove('formulario_error-activo');
+        }
+        else {
+            telefono.classList.add("error");
+            telefono.classList.remove("ok");
+            document.querySelector(`#error_t .formulario_error`).classList.add('formulario_error-activo');
+        }
+
+        if (this.value.length >= 1) {
+            this.nextElementSibling.classList.add('fijar');
+        } else {
+            this.nextElementSibling.classList.remove('fijar');
+        }
+
+    });
 }
 
+
+
+
+
 let sinError = true;
-function validar(){
+function validar() {
     let nombre = document.getElementById("nombre");
     let mensaje = document.getElementById("mensaje");
     let lista_errores = document.getElementById("lista_errores");
     let lista_mensaje = document.getElementById("lista_mensaje");
-    
+
     lista_errores.innerHTML = "";
     nombre.classList.remove("error");
     mensaje.classList.remove("error");
-    if(nombre.value.trim()==""||nombre.value.length>20){
+    if (!expresiones.nombre.test(nombre.value)) {
 
         console.log("nombre invalido");
         let texto = document.createElement("li");
@@ -35,8 +83,10 @@ function validar(){
         nombre.classList.add("error");
         sinError = false;
     }
-    
-    if(mensaje.value.trim()==""||mensaje.value.length>200){
+
+
+    if ( !expresiones.mensaje.test(mensaje.value)) {
+
 
         console.log("mensaje invalido");
         let texto = document.createElement("li");
@@ -45,22 +95,46 @@ function validar(){
         mensaje.classList.add("error");
         sinError = false;
     }
-    if(sinError){
+
+    if ( !expresiones.correo.test(correo.value)) {
+
+
+        console.log("correo invalido");
+        let texto = document.createElement("li");
+        lista_errores.appendChild(texto);
+        texto.innerHTML = "correo invalido";
+        mensaje.classList.add("error");
+        sinError = false;
+    }
+    if ( !expresiones.telefono.test(telefono.value)) {
+
+
+        console.log("telefono invalido");
+        let texto = document.createElement("li");
+        lista_errores.appendChild(texto);
+        texto.innerHTML = "telefono invalido";
+        mensaje.classList.add("error");
+        sinError = false;
+    }
+    if (sinError) {
 
         let item = document.createElement("li");
         lista_mensajes.appendChild(item);
-        
-        item.innerHTML = nombre.value+" <b>dice </b> "+mensaje.value;
+         item.innerHTML = nombre.value + " <b>dice </b> " + mensaje.value;
+
+        let item1 = document.createElement("li");
+        lista_mensajes.appendChild(item1);
+        item1.innerHTML = correo.value + " <b>correo y telefono </b> " + telefono.value;
+
+
         mensaje.value = "";
         mensaje.focus();
+    }
+
+   
 }
 
 
-// document.forms[0].reset();
-//let f = document.getElementById("frm");
-// f.reset();
-}
-//return false;
 ///////////////////////////////////////////////////
 const imagenes = document.querySelector(".imagenes");
 const Todasimagenes = document.querySelectorAll(".imagen");

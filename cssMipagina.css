@@ -4,7 +4,7 @@
   
  .flex-container {
   display: flex;
-  background-color:hsl(208, 78%, 79%,0.4) ;
+  background-color:rgba(206, 222, 235, 0.66) ;
 }
 
 .flex-container > div {
@@ -21,7 +21,7 @@
   width: 1000px;
   height: 450px;
   overflow: hidden;
-  background-color: rgb(232, 232, 169,0.5);
+  background-color: rgb(232, 232, 169,0.3);
   margin: auto;
   margin-top: 10px;
   border: solid black 3px;
@@ -36,12 +36,16 @@
       height: 30px;
       display: flex;
       justify-content: space-between;
+      
   }
   #btn{
     border: solid black 1px;  
-    background-color: aquamarine;
-    flex-basis: 20%;
+    background-color: rgb(227, 73, 73);
+    flex-basis: 60px;
+    height: 50px;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px rgba(234, 54, 54, 0.705);
   }
   .imagen {
   
@@ -52,9 +56,10 @@
     margin: auto;
   }
   .titu {
-    font-family:Cambria, Cochin, Georgia;
-    font-size: 40px;
+    font-family: BlinkMacSystemFont;
+    font-size: 60px;
     background-color: rgb(232, 232, 169,0.5);
+    text-align: center;
   }
   body{
     background-image: url(Bosqueceramica/logo.jpeg);
@@ -62,4 +67,9 @@
   .carrousel{
     border: solid black 3px;
     border-radius: 20px;
+  }
+  .btn-flecha{
+    background-color: rgba(234, 54, 54) ;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px rgba(234, 54, 54, 0.705);
   }

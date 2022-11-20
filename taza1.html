@@ -34,16 +34,38 @@
         <div class="div_form">
           <form action="" class="formulario">
             <h1 for="" class="formulario__titulo">Contactenos</h1>
-            <input type="text" class="formulario__input" id="nombre">
-            <label for="" class="formulario__label">Nombre</label>
-            <input type="text" class="formulario__input">
-            <label for="" class="formulario__label">Correo</label>
-            <input type="text" class="formulario__input">
-            <label for="" class="formulario__label">Telefono</label>
-            <input type="text" class="formulario__input" id="mensaje">
-            <label for="" class="formulario__label">Mensaje</label>
-            <input type="submit" class="formulario__submit">
-          </form>
+            <div id="error_n">
+                <input type="text" class="formulario__input" id="nombre">
+                <label for="" class="formulario__label">Nombre</label>
+                <p class="formulario_error">El nombre tiene que ser de 4 a 40 digitos y solo puede contener
+                    numeros
+                    letras y guion bajo</p>
+            </div>
+
+            <div id="error_c">
+                <input type="text" class="formulario__input" id="correo">
+                <label for="" class="formulario__label">Correo</label>
+                <p class="formulario_error">El correo solo puede contener numeros
+                    letras y guion bajo, caracter @ "formato mail"</p>
+            </div>
+
+            <div id="error_t">
+                <input type="text" class="formulario__input" id="telefono">
+                <label for="" class="formulario__label">Telefono</label>
+                <p class="formulario_error">El telefono solo puede contener numeros y el maximo de 14 digitos
+                </p>
+            </div>
+
+            <div id="error_m">
+                <input type="text" class="formulario__input" id="mensaje">
+                <label for="" class="formulario__label">Mensaje</label>
+                <p class="formulario_error">El mensaje tiene que ser de 4 a 60 digitos y solo puede contener
+                    numeros
+                    letras y guion bajo</p>
+            </div>
+         
+
+        </form>
           <script src="jsMiPagina.js"></script>
            </div> 
            <img class="img_logo" src="Bosqueceramica/logo.jpeg" alt="">
@@ -52,7 +74,7 @@
       
       <div>
         <div class="container-bar">
-          <input type="checkbox" id="btn-social">
+          
           <label for="btn-social" class="fa fa-play"></label>
           <div class="icon-social">
             <a href="https://www.facebook.com/BosqueCeramicas/?__xts__[0]=" class="fa fa-facebook" target="_self"><img
@@ -77,14 +99,20 @@
           </div>
         </div>
       </div>
+      
     </div>
-    <footer>
-      <button onclick="validar()" id="boton">boton</button>
-      <div class="lista">
-        <ul id="lista_errores"></ul>
-        <ul id="lista_mensajes"></ul>
-      </div>
-    </footer>
+    <div >
+      <button onclick="validar()"  class="formulario__botn" id="boton">Enviar</button>
+    </div>
+    <div class="lista">
+      <a class="btn_volver"    href="index.html" target="_self"><img src="Bosqueceramica/atras.png" alt=""></a>
+      
+      <ul id="lista_errores"></ul>
+      <ul id="lista_mensajes"></ul>
+     
+      
+    </div>
+   
 </body>
 
 </html>

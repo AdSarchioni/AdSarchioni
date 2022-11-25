@@ -76,7 +76,7 @@ color:black;
   border: 2px solid rgba(0, 0, 0,1);
   border-radius: 20px; 
   float: right;
- background-color: rgb(245, 243, 207);
+ background-color: rgb(245, 243, 207,0.4);
  box-sizing: border-box;
    
     margin: 10;

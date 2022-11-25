@@ -12,6 +12,7 @@ let inputs = document.getElementsByClassName('formulario__input');
 
 
 
+
 for (let i = 0; i < inputs.length; i++) {
 
     inputs[i].addEventListener('keyup', function () {
@@ -64,18 +65,21 @@ for (let i = 0; i < inputs.length; i++) {
 
 
 
+
+
 let sinError = true;
 function validar() {
     let nombre = document.getElementById("nombre");
     let mensaje = document.getElementById("mensaje");
     let lista_errores = document.getElementById("lista_errores");
     let lista_mensaje = document.getElementById("lista_mensaje");
-
+    
     lista_errores.innerHTML = "";
     nombre.classList.remove("error");
     mensaje.classList.remove("error");
-    if (!expresiones.nombre.test(nombre.value)) {
-
+    sinError = true;
+    if (!expresiones.nombre.test(nombre.value)||nombre.value.trim()==""||nombre.value.length>40) {
+        
         console.log("nombre invalido");
         let texto = document.createElement("li");
         lista_errores.appendChild(texto);
@@ -85,9 +89,9 @@ function validar() {
     }
 
 
-    if ( !expresiones.mensaje.test(mensaje.value)) {
+    if ( !expresiones.mensaje.test(mensaje.value)||mensaje.value.trim()==""||mensaje.value.length>60) {
 
-
+        
         console.log("mensaje invalido");
         let texto = document.createElement("li");
         lista_errores.appendChild(texto);
@@ -97,27 +101,26 @@ function validar() {
     }
 
     if ( !expresiones.correo.test(correo.value)) {
-
-
+      
         console.log("correo invalido");
         let texto = document.createElement("li");
         lista_errores.appendChild(texto);
         texto.innerHTML = "correo invalido";
-        mensaje.classList.add("error");
+        correo.classList.add("error");
         sinError = false;
     }
     if ( !expresiones.telefono.test(telefono.value)) {
 
-
+      
         console.log("telefono invalido");
         let texto = document.createElement("li");
         lista_errores.appendChild(texto);
         texto.innerHTML = "telefono invalido";
-        mensaje.classList.add("error");
+        telefono.classList.add("error");
         sinError = false;
     }
     if (sinError) {
-
+    
         let item = document.createElement("li");
         lista_mensajes.appendChild(item);
          item.innerHTML = nombre.value + " <b>dice </b> " + mensaje.value;
@@ -126,78 +129,14 @@ function validar() {
         lista_mensajes.appendChild(item1);
         item1.innerHTML = correo.value + " <b>correo y telefono </b> " + telefono.value;
 
-
+      
         mensaje.value = "";
         mensaje.focus();
+        mensaje.classList.remove("ok");
+        mensaje.classList.add("error");
     }
 
    
 }
 
 
-///////////////////////////////////////////////////
-const imagenes = document.querySelector(".imagenes");
-const Todasimagenes = document.querySelectorAll(".imagen");
-const btAv = document.querySelector(".avanzar");
-const btRetroc = document.querySelector(".retroceder");
-btAv.addEventListener("click",sigu);
-btRetroc.addEventListener("click",previa);
-let indice = 0;
-let intervalo =setInterval(inicioIntervalo,2000);
-
-function inicioIntervalo(){
-    indice++;
-    moverCarrusel();
-}
-function reste(){
-    clearInterval(intervalo);
-    intervalo=setInterval(inicioIntervalo,5000);
-}
-function moverCarrusel(){
-    if(indice >Todasimagenes.length-1){
-        indice=0;
-    }else if(indice<0){
-        indice = Todasimagenes.length-1;
-    }
-    imagenes.style.transform = `translatex(-${indice*300}px)`;
-}
-function previa(){
-    indice --;
-    reste();
-    moverCarrusel();
-}
-function sigu(){
-    indice++;
-    reste();
-    moverCarrusel();
-}
-    //////////////////////////////////////
-    let i = 0;
-let fotos = [
-"Bosqueceramica/img16.jpeg",
-"Bosqueceramica/img17.jpeg",
-"Bosqueceramica/img18.jpeg",
-];
-
-function cambiaImg(){
-    let img = document.getElementById("img-foto");
-    img.src = fotos[i];           
-}
-
-function avanzar(){
-    if(i < fotos.length - 1){
-     i ++;
-    } else {
-        i= 0;
-    }
-    cambiaImg();
-}
-
-function retroceder(){
-    if(i > 0){
-     i --;
-    } else {
-        i = fotos.length - 1;
-    }
-    cambiaImg();
-}
